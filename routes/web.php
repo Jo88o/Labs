@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// routes adminlte //
 Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+
+// routes pages //
+Route::get('/', function () {
+    return view('pages.home');
+});
+Route::get('/services', function () {
+    return view('pages.services');
+});
+Route::get('/home', function () {
+    return view('pages.home');
+});
+Route::get('/elements', function () {
+    return view('pages.elements');
+});
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+Route::get('/blog', function () {
+    return view('pages.blog');
+});
+Route::get('/blog-post', function () {
+    return view('pages.blog-post');
+});
+
+
