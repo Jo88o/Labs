@@ -4,10 +4,12 @@
 	<!-- Intro Section -->
 	<div class="hero-section">
 		<div class="hero-content">
+			@foreach ($datas as $elem)	
 			<div class="hero-center">
-				<img src="img/big-logo.png" alt="">
+				<img src="{{asset('img/'.$elem->src)}}" alt="">
 				<p>Get your freebie template now!</p>
 			</div>
+			@endforeach
 		</div>
 		<!-- slider -->
 		<div id="hero-slider" class="owl-carousel">

@@ -248,48 +248,54 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
+            'text'    => 'Home',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'menu',
+                    'url'  => '/homeL/1/edit',
+                ],
+                [
+                    'text'    => 'bannière',
+                    'url'     => '/homeLE/editimg',
+                ],
+                [
+                    'text' => 'services rapide',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
+                    'text' => 'présentation',
                     'url'  => '#',
                 ],
-            ],
+                [
+                    'text' => 'vidéo',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'testimonials',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'services',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'team',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'ready ?',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'info contact/formulaire',
+                    'url'  => '#',
+                ],
+                        ],
+                    
         ],
+
+
         ['header' => 'labels'],
         [
             'text'       => 'important',
