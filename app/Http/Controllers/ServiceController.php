@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
+use App\Models\HomeI;
+use App\Models\HomeL;
+use App\Models\HomeP;
+use App\Models\HomeS;
+use App\Models\HomeService;
 use App\Models\Service;
+use App\Models\ServiceSP;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -14,7 +21,13 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $datas = HomeL::all(); 
+        $serviceP = ServiceSP::all();
+        $service = HomeS::all()->random(3); 
+        $info = HomeI::all();
+        $service = HomeService::orderBy("id", "desc")->paginate(9);
+        $presentation = HomeP::all();
+        return view ('pages.services', compact('datas', 'serviceP', 'service', 'info', 'service', 'presentation')); 
     }
 
     /**

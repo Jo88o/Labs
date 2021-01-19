@@ -20,6 +20,7 @@ class CreateHomeLSTable extends Migration
             $table->string('lien3');
             $table->string('lien4');
             $table->string('src');
+            $table->string('slogan');
             $table->timestamps();
         });
     }

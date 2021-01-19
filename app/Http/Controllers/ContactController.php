@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\HomeI;
+use App\Models\HomeL;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -14,7 +16,10 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $datas = HomeL::all(); 
+        $info = HomeI::all(); 
+        $contact = Contact::all(); 
+        return view ('pages.contact', compact('datas', 'info', 'contact'));
     }
 
     /**

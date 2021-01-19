@@ -20,11 +20,9 @@ class HomeLSeeder extends Seeder
                 'lien2'=>'Blog',
                 'lien3'=>'Contact',
                 'lien4'=>'Elements',
-                'src'=>'big-logo.png'
+                'src'=>'big-logo.png', 
+                'slogan'=>'Get your freebie template now!',
             ],
-            [
-                'src'=>'big-logo.png'
-            ]
         );
     }
 }

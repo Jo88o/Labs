@@ -260,58 +260,81 @@ return [
                     'url'     => '/homeLE/editimg',
                 ],
                 [
-                    'text' => 'services rapide',
-                    'url'  => '#',
-                ],
-                [
                     'text' => 'présentation',
-                    'url'  => '#',
+                    'url'  => '/homeP',
                 ],
                 [
                     'text' => 'vidéo',
-                    'url'  => '#',
+                    'url'  => '/homeV',
                 ],
                 [
                     'text' => 'testimonials',
-                    'url'  => '#',
+                    'url'  => '/homeT/create',
                 ],
                 [
                     'text' => 'services',
-                    'url'  => '#',
+                    'url'  => '/homeService/create',
                 ],
                 [
                     'text' => 'team',
-                    'url'  => '#',
+                    'url'  => '/homeTeam/create',
                 ],
                 [
                     'text' => 'ready ?',
-                    'url'  => '#',
+                    'url'  => '/homeR',
                 ],
                 [
                     'text' => 'info contact/formulaire',
-                    'url'  => '#',
+                    'url'  => '/homeI',
                 ],
-                        ],
-                    
+                [
+                    'text' => 'titres',
+                    'url'  => '/homeTitre',
+                ],
+            ],
+
+        ],
+        [
+            'text'    => 'Services',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'bannière',
+                    'url'  => '',
+                ],
+                [
+                    'text'    => 'services primé',
+                    'url'     => '/servicesSPB',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Blog',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'bannière',
+                    'url'  => '',
+                ],
+                [
+                    'text'    => 'services primé',
+                    'url'     => '/servicesSPB',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Contact',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'map',
+                    'url'  => '/contactMB',
+                ],
+            ],
         ],
 
 
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        
     ],
 
     /*

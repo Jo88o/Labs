@@ -11,7 +11,7 @@
 <header class="header-section d-flex align-items-center justify-content-center">
     @foreach ($datas as $elem)
         <div class="logo">
-            <img class="" height="40px;" src="{{asset('img/'.$elem->src)}}" alt=""><!-- Logo -->
+            <img class="" height="40px;" src="{{asset('img/'.$elem->src)}}" alt="">
         </div>
     @endforeach
 
@@ -20,7 +20,7 @@
     <nav>
         <ul class="menu-list">
             <li class="active"><a href="/">Home</a></li>
-            <li><a href="/services">{{ $datas[0]->lien1 }}</a></li>
+            <li><a href="/services">{{$datas[0]->lien1}}</a></li>
             <li><a href="/blog">{{ $datas[0]->lien2 }}</a></li>
             <li><a href="/contact">{{ $datas[0]->lien3 }}</a></li>
             <li><a href="/elements">{{ $datas[0]->lien4 }}</a></li>
