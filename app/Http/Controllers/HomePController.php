@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class HomePController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +18,9 @@ class HomePController extends Controller
     public function index()
     {
         $datas = HomeP::all(); 
+
+        
+
         return view ('backend.homePB', compact('datas'));
     }
 

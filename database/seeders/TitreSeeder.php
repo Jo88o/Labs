@@ -16,7 +16,21 @@ class TitreSeeder extends Seeder
     {
         DB::table('titres')->insert(
             [
-                'titre'=>'WHAT OUR CLIENTS SAY',
+                [
+                    'titre' => 'GET IN THE LAB AND DISCOVER THE WORLD',
+                ],
+                [
+                    'titre' => 'WHAT OUR CLIENTS SAY',
+                ],
+                [
+                    'titre' => 'GET IN THE LAB AND SEE THE SERVICES',
+                ],
+                [
+                    'titre' => 'GET IN THE LAB AND MEET THE TEAM',
+                ],
+                [
+                    'titre' => 'GET IN THE LAB AND DISCOVER THE WORLD',
+                ],
             ],
         );
     }

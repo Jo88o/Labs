@@ -14,6 +14,9 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->only(['create', 'store', 'show', 'edit', 'update', 'destroy']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -22,12 +25,12 @@ class ServiceController extends Controller
     public function index()
     {
         $datas = HomeL::all(); 
-        $serviceP = ServiceSP::all();
-        $service = HomeS::all()->random(3); 
-        $info = HomeI::all();
-        $service = HomeService::orderBy("id", "desc")->paginate(9);
+        $serviceP = ServiceSP::all(); 
+        $service = HomeS::all()->random(9); 
+        $contact = HomeI::all();
+        $serviceH = HomeService::orderBy("id", "desc")->paginate(9);
         $presentation = HomeP::all();
-        return view ('pages.services', compact('datas', 'serviceP', 'service', 'info', 'service', 'presentation')); 
+        return view ('pages.services', compact('datas', 'serviceP', 'service', 'contact', 'serviceH', 'presentation')); 
     }
 
     /**

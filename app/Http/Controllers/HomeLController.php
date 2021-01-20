@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Storage;
 
 class HomeLController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->only(['editimg']);
+    }
     /**
      * Display a listing of the resource.
      *

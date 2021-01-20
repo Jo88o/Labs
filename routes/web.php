@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactMapController;
+use App\Http\Controllers\ElementController;
 use App\Http\Controllers\HomeIController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -53,7 +55,13 @@ Route::get('/home', function() {
 Route::get('/', function(){
     $datas = HomeL::all();
     $caroussel = Caroussel::all();
+    
     $presentation = homeP::all();
+    $select = $presentation[0]->titre;
+        $start = Str::before($select, '(');
+        $end = Str::after($select, ')');
+        $slice = Str::between($select, '(', ')');
+
     $serviceRandom = homeS::all()->random(3);
     $video = HomeV::all();
     $testimonial = HomeT::all();
@@ -62,7 +70,7 @@ Route::get('/', function(){
     $ready = HomeR::all();
     $info = HomeI::all(); 
     $titre = Titre::all();
-    return view('pages.home', compact('datas', 'caroussel', 'presentation', 'serviceRandom', 'video', 'testimonial', 'service', 'team', 'ready', 'info', 'titre'));
+    return view('pages.home', compact('datas', 'caroussel', 'presentation', 'serviceRandom', 'video', 'testimonial', 'service', 'team', 'ready', 'info', 'titre', 'select', 'start', 'end', 'slice'));
 });
 
 // route home // 
@@ -108,38 +116,16 @@ Route::resource('/contact', ContactController::class);
 Route::resource('/contactMB', ContactMapController::class);
 
 
+// route blog //
+
+Route::resource('/blog', BlogController::class);
+
+
+// route elements // 
+ Route::resource('/elements', ElementController::class);
 
 
 
 
-// Route::resource('/blog', Blog::class);
-// Route::resource('/blog-post', BlogP::class);
-// Route::resource('/contact', Contact::class);
-// Route::resource('/elements', Element::class);
-
-
-
-//routes pages //
-// Route::get('/', function () {
-//     return view('pages.home');
-// });
-// Route::get('/services', function () {
-//     return view('pages.services');
-// });
-// Route::get('/home', function () {
-//     return view('pages.home');
-// });
-// Route::get('/elements', function () {
-//     return view('pages.elements');
-// });
-// Route::get('/contact', function () {
-//     return view('pages.contact');
-// });
-// Route::get('/blog', function () {
-//     return view('pages.blog');
-// });
-// Route::get('/blog-post', function () {
-//     return view('pages.blog-post');
-// });
 
 

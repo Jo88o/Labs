@@ -15,8 +15,7 @@
         <input type="text" name="texte1" value="{{$elem->texte1}}">
         <h3>Nouveau texte paragraphe 2</h3>
         <input type="text" name="texte2" value="{{$elem->texte2}}">
-        <h3>Mot du texte en vert</h3>
-        <input type="text" name="vert" value="{{$elem->vert}}">
+        <br>
         <h3>Nouveau bouton</h3>
         <input type="text" name="button" value="{{$elem->button}}">
         <br>

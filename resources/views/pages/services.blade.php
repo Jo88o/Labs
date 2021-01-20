@@ -40,7 +40,7 @@
 				</div>
 				@endforeach
 			</div>
-			{{ $service->fragment('service')->links()}}
+			{{ $serviceH->fragment('service')->links()}}
 			@foreach ($presentation as $elem)
 				
 			<div class="text-center">
@@ -148,8 +148,7 @@
 		<div class="container">
 			<div class="row">
 				<!-- Single Card -->
-				
-				@foreach ($serviceP as $elem)
+				@foreach ($serviceH as $elem)
 				<div class="col-md-4 col-sm-6">
 					<div class="sv-card">
 						<div class="card-img">
@@ -161,9 +160,6 @@
 						</div>
 					</div>
 				</div>
-				
-				
-				
 				@endforeach
 			</div>
 		</div>
@@ -195,7 +191,7 @@
 	<div class="contact-section spad fix">
 		<div class="container">
 			<div class="row">
-				@foreach ($info as $elem)
+				@foreach ($contact as $elem)
 					
 				<!-- contact info -->
 				<div class="col-md-5 col-md-offset-1 contact-info col-push">
@@ -216,7 +212,7 @@
 								<input type="text" name="name" placeholder="{{$elem->name}}">
 							</div>
 							<div class="col-sm-6">
-								<input type="text" name="email" placeholder="{{$elem->mail}}">
+								<input type="text" name="mail" placeholder="{{$elem->mail}}">
 							</div>
 							<div class="col-sm-12">
 								<input type="text" name="subject" placeholder="{{$elem->subject}}">

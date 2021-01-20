@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Element;
+use App\Models\HomeS;
 use Illuminate\Http\Request;
 
 class ElementController extends Controller
@@ -14,7 +15,8 @@ class ElementController extends Controller
      */
     public function index()
     {
-        //
+        $datas = HomeS::all(); 
+        return view ('pages.elements', compact('datas')); 
     }
 
     /**

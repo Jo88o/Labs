@@ -29,7 +29,6 @@
             <div class="container">
                 <div class="row">
                     @foreach ($serviceRandom as $elem)
-
                         <div class="col-md-4 col-sm-12">
                             <div class="lab-card">
                                 <div class="icon">
@@ -40,8 +39,6 @@
                             </div>
                         </div>
                     @endforeach
-                    <!-- single card -->
-
                 </div>
             </div>
             <!-- card section end-->
@@ -53,7 +50,7 @@
                     @foreach ($presentation as $elem)
 
                         <div class="section-title">
-                            <h2>{{ $elem->titre }}<span>{{ $elem->vert }}</span></h2>
+                            <h2>{{$start}}<span>{{$slice}}</span>{{$end}}</h2>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
@@ -94,7 +91,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-4">
                         <div class="section-title left">
-                            <h2>{{ $titre[0]->titre }}</h2>
+                            <h2>{{ $titre[1]->titre }}</h2>
                         </div>
                         <div class="owl-carousel" id="testimonial-slide">
 
@@ -124,7 +121,7 @@
 
 
         <!-- Services section -->
-        <div class="services-section spad">
+        <div class="services-section spad bg-success">
             <div class="container">
                 <div class="section-title dark">
                     <h2>Get in <span>the Lab</span> and see the services</h2>
